@@ -1,0 +1,107 @@
+.button-container {
+    display:inline-block;
+    width:100%;
+    background-color: black;
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index:1;
+}
+
+.button {
+    color:white;
+    background-color:black;
+    width:25%;
+    margin:10px 0px;
+    border:none;
+    padding:10px;
+    float:left;
+}
+
+.button:hover {
+    color: black;
+    background-color: #D3D3D3;
+}
+
+.home {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dark {
+    padding:10px 10px;
+    background-color: black;
+    color: white;
+}
+
+.subject {
+    text-align: center;margin-left:45%; margin-right: 45%;
+    margin-bottom: 3%; margin-top: 3%;
+}
+
+.subject-body{
+    text-align:left;
+    margin-left:20%;
+    margin-right: 20%;
+}
+
+table, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align:center;
+}
+
+th{
+    width:50%;
+}
+
+input {
+    margin-top:10px;
+}
+
+
+body {
+    background-color: #F9E7E4;
+}
+
+.menu-bar {
+    display:inline-block;
+    width:100%;
+}
+
+.menu-sections {
+    float:left;
+    width:50%;
+    background-color:#DFB7B0;
+    color:white;
+    text-align: center;
+}
+
+.menu-sections:hover {
+    cursor: hand;
+}
+
+
+.menu {
+     border: solid 1px;
+    padding-left:10%;
+    margin-bottom: 3%;
+}
+
+.selected {
+    background-color:#8F706B;
+    color:black;
+}
