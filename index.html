@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<title>Cafe Shopt</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="format.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<body>
+<div class="button-container">
+    <a href="#h"><button class="button">Home</button></a>
+    <a href="#about"><button class="button">About</button></a>
+    <a href="#menu"><button class="button">Menu</button></a>
+    <a href="#location"><button class="button">Where</button></a>
+</div>
+
+<div class="home" id="h">
+    <img src="https://p0.pikist.com/photos/86/934/coffee-shop-cafe-restaurant-people-customer-coffeemaker-caffeine.jpg" alt="Coffee Shop" style="width:100%;height:600px">    
+    <div class="centered" style="font-size: 120px; font-style: italic;">Cafe Shopt</div>
+</div>
+
+<div id="about" style="text-align:center;"><br>
+    <h2 class="dark subject">About us</h2>
+    <div class="subject-body">
+    <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+    <img src="https://c0.wallpaperflare.com/preview/204/884/900/brooklyn-united-states-coffee-shop-new-york.jpg" alt="Coffe Shop" style="height:500px; width:100%;">
+    </div>
+</div>
+
+<div id="menu"><br>
+    <h2 class="dark subject">Menu</h2>
+    <div class="subject-body">
+    <div class="menu-bar">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="menu-sections">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="menu-sections">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="menu">
+      <h5>Bread Basket</h5>
+      <p>Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+      <h5>Honey Almond Granola with Fruits</h5>
+      <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h5>Belgian Waffle</h5>
+      <p>Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h5>Scrambled eggs</h5>
+      <p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+      <h5>Blueberry Pancakes</h5>
+      <p>With syrup, butter and lots of berries 8.50</p>
+    </div>
+
+    <div id="Drinks" class="menu">
+      <h5>Coffee</h5>
+      <p>Regular coffee 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p>Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Iced tea</h5>
+      <p>Hot tea, except not hot 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p>Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+
+        <img src="https://live.staticflickr.com/2265/2260643716_de59b35804_b.jpg" alt="Coffee" style="width:100%; height:500px;">
+    </div>
+</div>
+
+<div id="location"><br>
+    <h2 class="dark subject">Location</h2>
+    <div class="subject-body">
+        <p>Find us at some address at some place.</p>    
+        <img src="https://www.goodfreephotos.com/albums/austria/vienna/street-view-with-buildings-and-road-in-vienna-austria.jpg" alt="Street View" style="height:500px; width:100%;">
+        <p><b>FYI!</b> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+        <p><b>Reserve</b> a table, ask for today's special or just send us a message:</p>
+        <form>
+            <input type="text" placeholder="Name" style="width:100%; height:30px;"><br>
+            <input type="text" placeholder="How many people" style="width:100%; height:30px;"><br>
+            <input type="date" style="width:100%; height:30px;"><br>
+            <input type="text" placeholder="Special Requirements (Allergies etc.)" style="width:100%; height:30px;"><br>
+            <input class="button" type="submit" value="Send" style="margin-top:10px;">
+        </form>
+    </div>
+</div>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(menuName).style.display = "block";
+  tablinks = document.getElementsByClassName("menu-sections");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" selected", "");
+  }
+  evt.currentTarget.firstElementChild.className += " selected";
+}
+document.getElementById("myLink").click();
+</script>
+
+
+</body>
+</html>
